@@ -1,0 +1,46 @@
+﻿using ERP.Domain.Entities.Sales.BaoGias.BaoGia;
+using ERP.Share.Abstractions.Shared;
+using ERP.Share.DTO;
+
+namespace ERP.Application.UseCases.BaoGia.CreateBaoGia;
+public sealed record CreateBaoGiaCommand(
+    string NgayBaoGia,
+    Ulid IdKhachHang,
+    Ulid IdLienHe,
+    int HieuLucBaoGia,
+    Ulid IdDieuKhoanThanhToan,
+    Ulid IdDieuKhoanThanhToanKhachHang,
+    decimal ThanhTienNet,
+    ThanhTien ThanhTien0,
+    ThanhTien ThanhTien8,
+    ThanhTien ThanhTien10,
+    decimal TongThanhTien,
+    decimal TienThuDichVuVat,
+    string LoaiDon,
+    string TrangThaiDon,
+    string? LyDoTruot,
+    string? NgayTruot,
+    string TrangThaiDuyet,
+    string? LyDoHuyDuyet,
+    string KhaNangTrung,
+    bool IsBaoGiaQuanTrong,
+    string? SR,
+    string? SR2,
+    string? SA,
+    Ulid? IdCTKM,
+    string? ChiNhanh,
+    string? KhoXuLy,
+    string? DiaChiGiaoHang,
+    string? NguoiNhanHang,
+    string? NgayDuKienGiao,
+    int SoLuongComment,
+    bool CanDuyetCMDuoi20,
+    string? NguoiDuyetCMDuoi20,
+    string? NgayDuyetCMDuoi20,
+    string? GhiChuDuyetCMDuoi20,
+    string? IASHoTro1,
+    string? IASHoTro2,
+    List<AddBaoGiaChiTietDTO> AddBaoGiaChiTiets
+//List<BaoGiaCommentDTO> AddBaoGiaComments,
+//List<LyDoTruotDTO> AddLyDoTruots
+) : ICommand;

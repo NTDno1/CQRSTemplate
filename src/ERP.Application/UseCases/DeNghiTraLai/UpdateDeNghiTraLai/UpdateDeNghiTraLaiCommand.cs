@@ -1,0 +1,45 @@
+﻿using ERP.Share.Abstractions.Shared;
+namespace ERP.Application.UseCases.DeNghiTraLai.UpdateDeNghiTraLai;
+public sealed record UpdateDeNghiTraLaiCommand(
+    Ulid id,
+    string? ngayDeNghi,
+    string? nguoiDeNghi,
+    string? maNhatHang,
+    string? soPhieuXuatKho,
+    string? nguoiTraLai,
+    string? lyDoDeNghi,
+    string? leaderDuyet,
+    string? ngayLeaderDuyet,
+    string? trangThaiLeaderDuyet,
+    string? ghiChuLeaderDuyet,
+    string? kyThuatDuyet,
+    string? ngayKyThuatDuyet,
+    string? trangThaiKyThuatDuyet,
+    string? ghiChuKyThuatDuyet,
+    string? ghiChuDonHang,
+    bool? canDiLayHang,
+    string? diaChiLayHang,
+    string? nguoiGiaoHangThucTe,
+    string? ghiChuGiaoNhan,
+    bool? daNhapKho,
+    string? soPhieuNhapKho,
+    string? trucThuoc,
+    Ulid? idKhoNhapHang,
+    string? hinhThucTraLai,
+    decimal? soTienPhiNhapLai,
+    string? lyDoThuPhiNhapLai,
+    List<UpdateDeNghiTraLaiChiTietCommand>? deNghiTraLaiChiTiets) : ICommand;
+
+public sealed record UpdateDeNghiTraLaiChiTietCommand(
+    Ulid Id,
+    Ulid IdHangHoa,
+    string MaDieuChinh,
+    int SoLuong,
+    decimal DonGiaBan,
+    decimal DonGiaVon,
+    string GhiChu,
+    decimal ThueGTGT,
+    Ulid IdChiTietXuatKho,
+    bool DaNhapKho,
+    int SoLuongDaNhap);
+
